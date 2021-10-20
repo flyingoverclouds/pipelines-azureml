@@ -85,7 +85,7 @@ steps:
         echo "AKS CLUSTER ALREADY EXIST. REUSING IT" 
       else
         echo "No cluster --> CREATING A NEW ONE !"
-        echo  az ml computetarget create aks --name $(ml-aks-name) --cluster-purpose DevTest
+        az ml computetarget create aks --name $(ml-aks-name) --cluster-purpose DevTest
       fi;
 
 - task: AzureCLI@2
