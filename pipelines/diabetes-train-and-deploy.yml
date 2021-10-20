@@ -79,7 +79,12 @@ steps:
     workingDirectory: $(ml-path)
     scriptLocation: inlineScript
     scriptType: 'bash'
-    inlineScript: 'az ml computetarget create aks --name $(ml-aks-name) --cluster-purpose DevTest'
+    inlineScript: |
+      if [ `az ml computetarget list -g docs-aml -w docs-ws --query "[?name=='aks-prod'].{Name:name}" -o tsv`==$(ml-aks-name)]; then
+        echo "AKS CLUSTER ALREADY EXIST. REUSING IT" 
+      else
+        az ml computetarget create aks --name $(ml-aks-name) --cluster-purpose DevTest
+      fi;
 
 - task: AzureCLI@2
   displayName: 'Deploy model to AKS for Production'
