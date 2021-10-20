@@ -7,7 +7,7 @@ from inference_schema.schema_decorators import input_schema, output_schema
 from inference_schema.parameter_types.numpy_parameter_type import NumpyParameterType
 from utils import mylib
 
-
+# commentaire
 
 def init():
     global model
