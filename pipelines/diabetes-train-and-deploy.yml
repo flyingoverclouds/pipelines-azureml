@@ -80,8 +80,8 @@ steps:
     scriptLocation: inlineScript
     scriptType: 'bash'
     inlineScript: |
-      az ml computetarget list -g docs-aml -w docs-ws --query "[?name=='$(ml-aks-name)'].{Name:name}"
-      if [ `az ml computetarget list -g docs-aml -w docs-ws --query "[?name=='$(ml-aks-name)'].{Name:name}" -o tsv`==$(ml-aks-name) ]; then
+      nbCluster=`az ml computetarget list -g docs-aml -w docs-ws --query "[?name=='$(ml-aks-name)'].{Name:name}" -o tsv | wc -l`
+      if [ $nbCluster == 1 ]; then
         echo "AKS CLUSTER ALREADY EXIST. REUSING IT" 
       else
         echo "No cluster --> CREATE A NEW ONE !"
