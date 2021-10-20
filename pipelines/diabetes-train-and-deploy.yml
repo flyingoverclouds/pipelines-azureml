@@ -8,9 +8,6 @@ variables:
   ml-model-name: 'diabetes-model' # Model name
   ml-aks-name: 'aks-prod' # AKS cluster name
 
-#trigger:
-#- master
-
 pr:
 - master
 
