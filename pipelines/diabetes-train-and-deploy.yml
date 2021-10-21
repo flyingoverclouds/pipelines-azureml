@@ -8,8 +8,8 @@ variables:
   ml-model-name: 'diabetes-model' # Model name
   ml-aks-name: 'aks-prod' # AKS cluster name
 
-# doc: https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml#pr-triggers
-pr:
+#pr:
+trigger:
 - master
 
 
