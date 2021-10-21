@@ -1,7 +1,6 @@
 # Copyright (c) Microsoft. All rights reserved.
 # Licensed under the MIT license.
 
-#pour test trigger
 
 import pickle
 import os
