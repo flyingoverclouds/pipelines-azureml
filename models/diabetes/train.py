@@ -1,8 +1,7 @@
 # Copyright (c) Microsoft. All rights reserved.
 # Licensed under the MIT license.
 
-#pour test trigger
-
+#-
 import pickle
 import os
 import numpy as np
@@ -44,4 +43,4 @@ for alpha in alphas:
     with open(os.path.join('./outputs/', model_file_name), 'wb') as file:
         pickle.dump(reg, file)
 
-    print('Resultat du training: alpha is {0:.2f}, and mse is {1:0.2f}'.format(alpha, mse))
+    print('alpha is {0:.2f}, and mse is {1:0.2f}'.format(alpha, mse))
