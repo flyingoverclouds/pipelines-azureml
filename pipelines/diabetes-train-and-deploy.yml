@@ -10,9 +10,7 @@ variables:
 
 # doc: https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml#pr-triggers
 pr:
-  branches:
-    include:
-      - master
+- master
 
 
 pool:
