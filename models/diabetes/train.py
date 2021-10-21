@@ -1,7 +1,8 @@
 # Copyright (c) Microsoft. All rights reserved.
 # Licensed under the MIT license.
 
-#-
+# modification du model
+
 import pickle
 import os
 import numpy as np
@@ -43,4 +44,4 @@ for alpha in alphas:
     with open(os.path.join('./outputs/', model_file_name), 'wb') as file:
         pickle.dump(reg, file)
 
-    print('alpha is {0:.2f}, and mse is {1:0.2f}'.format(alpha, mse))
+    print('DEMO: alpha is {0:.2f}, and mse is {1:0.2f}'.format(alpha, mse))
